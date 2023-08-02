@@ -1,15 +1,15 @@
 [package]
 name = "rust-g"
 edition = "2021"
-version = "3.0.0"
+version = "3.0.0-G"
 authors = [
     "Bjorn Neergaard <bjorn@neersighted.com>",
     "Tad Hardesty <tad@platymuus.com>",
     "rust-g maintainer team",
 ]
-repository = "https://github.com/tgstation/rust-g"
+repository = "https://github.com/goonstation/rust-g"
 license = "MIT"
-description = "Offloaded task library for the /tg/ Space Station 13 codebase"
+description = "Offloaded task library for the Goonstation Space Station 13 codebase - adapted from tgstation/rust-g"
 
 [lib]
 crate-type = ["cdylib"]
