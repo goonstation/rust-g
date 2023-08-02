@@ -1,16 +1,18 @@
 # rust-g
 
+### This is a fork of the /tg/station rust-g version, found at https://github.com/tgstation/rust-g
+
 rust-g (pronounced rusty-g) is a library which offloads certain expensive or
 difficult tasks from BYOND.
 
-This library is currently used in the [/tg/station] codebase, and is required for
+This library is currently used in the [goonstation] codebase, and is required for
 it to run. A pre-compiled DLL version can be found in the repo root of codebases that use it,
 but you can build your own from this repo (and you should if you're running a server).
 
 Builds can also be found on the [releases page] **but should only be used for Windows**,
 as Linux has compatibility issues across distributions.
 
-[releases page]: https://github.com/tgstation/rust-g/releases
+[releases page]: https://github.com/goonstation/rust-g/releases
 
 ## Dependencies
 
@@ -19,7 +21,7 @@ The [Rust] compiler:
 1. Install the Rust compiler's dependencies (primarily the system linker):
 
    * Ubuntu: `sudo apt-get install gcc-multilib`
-   * Windows (MSVC): [Build Tools for Visual Studio 2017][msvc]
+   * Windows (MSVC): [Build Tools for Visual Studio 2017+][msvc]
    * Windows (GNU): No action required
 
 1. Use [the Rust installer](https://rustup.rs/), or another Rust installation method,
@@ -35,7 +37,7 @@ The [Rust] compiler:
 
     ```sh
     # Clone the `rust-g` repository to a directory of your choice
-    git clone https://github.com/tgstation/rust-g.git
+    git clone https://github.com/goonstation/rust-g.git
     # in the `rust-g` directory...
     cd rust-g
     # Linux
@@ -65,7 +67,7 @@ If you want to use the `pc-windows-gnu` or similar other target ABI, do the foll
 
 The [Cargo] tool handles compilation, as well as automatically downloading and
 compiling all Rust dependencies. The default configuration is suitable for
-use with the [/tg/station] codebase. To compile in release mode (recommended for
+use with the [goonstation] codebase. To compile in release mode (recommended for
 speed):
 
 Linux:
@@ -154,14 +156,14 @@ it is included in the `LD_LIBRARY_PATH` environment variable, or tweak the searc
 logic in `rust_g.dm`:
 
 ```sh
-$ export LD_LIBRARY_PATH=/path/to/tgstation
+$ export LD_LIBRARY_PATH=/path/to/goonstation
 ```
 
 To examine what locations BYOND is searching for the shared library, use
 `strace`:
 
 ```sh
-$ strace DreamDaemon tgstation.dmb 45000 -trusted -logself 2>&1 | grep 'rust_g'
+$ strace DreamDaemon goonstation.dmb 45000 -trusted -logself 2>&1 | grep 'rust_g'
 # Early in output, the file will be listed when BYOND examines every file it can see:
 open("rust_g", O_RDONLY|O_NONBLOCK|O_LARGEFILE|O_DIRECTORY|O_CLOEXEC) = -1 ENOTDIR (Not a directory)
 # BYOND will then search some common directories...
@@ -182,7 +184,7 @@ open("rust_g", O_RDONLY|O_NONBLOCK|O_LARGEFILE|O_DIRECTORY|O_CLOEXEC) = -1 ENOTD
 If you're still having problems, ask in the [Coderbus Discord]'s
 `#tooling-questions` channel.
 
-[/tg/station]: https://github.com/tgstation/tgstation
+[/tg/station]: https://github.com/goonstation/goonstation
 [Rust]: https://rust-lang.org
 [Cargo]: https://doc.rust-lang.org/cargo/
 [rustup]: https://rustup.rs/
@@ -190,6 +192,8 @@ If you're still having problems, ask in the [Coderbus Discord]'s
 [Coderbus Discord]: https://discord.gg/Vh8TJp9
 
 ## License
+
+The license for RUST-G itself can be found on tg's repo. Code for the Goonstation modifications falls under the same license.
 
 This project is licensed under the [MIT license](https://en.wikipedia.org/wiki/MIT_License).
 
