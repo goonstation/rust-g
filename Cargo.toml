@@ -67,19 +67,20 @@ tracy_full = { version = "1.7.1", optional = true }
 [features]
 default = [
     "acreplace",
+    "batchnoise",
     "cellularnoise",
     "dmi",
     "file",
     "git",
+    "hash",
     "http",
     "json",
     "log",
     "noise",
-    "rustls_tls",
-    "sql",
+    "redis_reliablequeue",
     "time",
-    "toml",
     "url",
+    "worleynoise",
 ]
 
 all = [
