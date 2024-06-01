@@ -73,16 +73,17 @@ default = [
     "dmi",
     "file",
     "git",
+    "hash",
     "http",
+    "iconforge",
     "json",
     "log",
     "noise",
-    "rustls_tls",
+    "redis_reliablequeue",
     "sanitize",
-    "sql",
     "time",
-    "toml",
     "url",
+    "worleynoise",
 ]
 
 all = [
