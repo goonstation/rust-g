@@ -81,13 +81,12 @@ default = [
     "json",
     "log",
     "noise",
-    "rustls_tls",
+    "redis_reliablequeue",
     "sanitize",
     "sound_len",
-    "sql",
     "time",
-    "toml",
     "url",
+    "worleynoise",
 ]
 
 all = [
