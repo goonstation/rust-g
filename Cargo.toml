@@ -97,14 +97,13 @@ default = [
     "log",
     "noise",
     "pathfinder",
-    "rustls_tls",
+    "redis_reliablequeue",
     "sanitize",
     "sound_len",
-    "sql",
     "time",
-    "toml",
     "url",
-    "uuid"
+    "uuid",
+    "worleynoise",
 ]
 
 all = [
