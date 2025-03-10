@@ -15,4 +15,4 @@ jobs:
           token: ${{ secrets.DISPATCH_TO_GOONHUB_PAT }}
           repository: goonstation/goonhub
           event-type: rustg_release
-          client-payload: '{"ref": "${{ github.ref }}", "ref_name": ""${{ github.ref_name }}"", "sha": "${{ github.sha }}"}'
+          client-payload: '{"ref": "${{ github.ref }}", "ref_name": "${{ github.ref_name }}", "sha": "${{ github.sha }}"}'
