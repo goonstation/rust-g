@@ -1,0 +1,18 @@
+name: Release Notifications
+
+on:
+  workflow_dispatch:
+  release:
+    types: [published]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify Goonhub
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.DISPATCH_TO_GOONHUB_PAT }}
+          repository: goonstation/goonhub
+          event-type: rustg_release
+          client-payload: '{"ref": "${{ github.ref }}", "ref_name": ""${{ github.ref_name }}"", "sha": "${{ github.sha }}"}'
