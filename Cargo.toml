@@ -86,9 +86,9 @@ iconforge = { version = "1.0.3", optional = true, features = ["spritesheet", "ga
 default = [
     "acreplace",
     "batchnoise",
-    "cave_system_generator",
     "cellularnoise",
     "dmi",
+    "ed25519",
     "file",
     "git",
     "hash",
@@ -97,15 +97,13 @@ default = [
     "json",
     "log",
     "noise",
-    "pathfinder",
-    "rustls_tls",
-    "sanitize",
+    "redis_reliablequeue",
+    "sqlite",
     "sound_len",
-    "sql",
     "time",
-    "toml",
     "url",
-    "uuid"
+    "uuid",
+    "worleynoise",
 ]
 
 all = [
