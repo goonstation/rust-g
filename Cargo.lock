@@ -3438,7 +3438,7 @@ dependencies = [
 
 [[package]]
 name = "rust-g"
-version = "7.1.0"
+version = "7.1.0-G"
 dependencies = [
  "aho-corasick",
  "ammonia",
